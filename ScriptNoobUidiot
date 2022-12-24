@@ -305,7 +305,7 @@ local Section = FirstTab:AddSection({
 })
 
 FirstTab:AddToggle({
-	Name = "自动扎箭",
+	Name = "自动闪避",
 	Default = false,
 	Callback = function(Value)
 	    _G.AutoDodge = Value
