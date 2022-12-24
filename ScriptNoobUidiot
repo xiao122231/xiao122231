@@ -127,7 +127,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
-wait(0.1)
+wait(7)
 end
 end
 
