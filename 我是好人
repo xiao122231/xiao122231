@@ -159,7 +159,12 @@ FirstTab:AddToggle({
 })
 
 
-
+OrionLib:MakeNotification({
+	Name = "你输入了正确的卡密!",
+	Content = "✌你输入了正确的卡密!",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
 
 
 
