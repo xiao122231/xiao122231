@@ -10,7 +10,7 @@ _G.AutoArrow = true
 _G.InfDamage = true
 _G.AutoClone = true
 _G.Menacing = true
-
+_G.AutoD4c = true
 
 
 
@@ -106,11 +106,17 @@ wait(0.01)
 end
 end
 
+function AutoD4c()
+while _G.AutoD4c == true do
+local args = {
+    [1] = "Alternate",
+    [2] = "Deflect"
+}
 
-
-
-
-
+game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
+wait(0.3)
+end
+end
 
 
 
@@ -230,6 +236,16 @@ FirstTab:AddToggle({
 	    AutoClone()
 	end    
 })
+
+FirstTab:AddToggle({
+	Name = "D4C自动反伤",
+	Default = false,
+	Callback = function(Value)
+	    _G.AutoD4c = Value
+	    AutoD4c()
+	end    
+})
+
 
 local Tab4 = Window:MakeTab({
 	Name = "娱乐类",
