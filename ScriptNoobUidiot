@@ -11,7 +11,7 @@ _G.InfDamage = true
 _G.AutoClone = true
 _G.Menacing = true
 _G.AutoD4c = true
-
+_G.AutoDodge = true
 
 
 
@@ -118,7 +118,18 @@ wait(0.3)
 end
 end
 
+function AutoDodge()
+while _G.AutoDodge == true do
+local args = {
+    [1] = "Alternate",
+    [2] = "STWRTZ",
+    [3] = true
+}
 
+game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
+wait(0.1)
+end
+end
 
 --Tabs
 local FirstTab = Window:MakeTab({
@@ -289,8 +300,18 @@ Tab3:AddToggle({
 
 
 
+local Section = FirstTab:AddSection({
+	Name = "需要Shadow Dio"
+})
 
-
+FirstTab:AddToggle({
+	Name = "自动扎箭",
+	Default = false,
+	Callback = function(Value)
+	    _G.AutoDodge = Value
+	    AutoDodge()
+	end    
+})
 
 
 
