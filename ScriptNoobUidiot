@@ -31,7 +31,7 @@ while _G.AutoTimeStop == true do
     }
     
     game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
-    wait(.0001)
+    wait(1)
     end
 end
 
@@ -43,7 +43,7 @@ function AutoBlock()
         }
         
         game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
-        wait(.0001)
+        wait(0.5)
     end
 end
 
@@ -59,14 +59,14 @@ end
 function AutoRoka()
    while _G.AutoRoka == true do
    game:GetService("ReplicatedStorage").ItemEvents.Roka:FireServer()
-wait(.0001)
+wait(0.3)
 end
 end
 
 function AutoArrow()
 while _G.AutoArrow == true do
 game:GetService("ReplicatedStorage").ItemEvents.Arrow:FireServer()
-wait(.0001)
+wait(0.3)
 end
 end
 
@@ -79,7 +79,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
-wait(.0001)
+wait(2)
 end
 end
 
@@ -91,7 +91,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
-wait(0.000001)
+wait(0.1)
 end
 end
 
@@ -102,7 +102,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Main.Menacing:FireServer(unpack(args))
-wait(0.01)
+wait(20)
 end
 end
 
@@ -114,7 +114,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
-wait(0.3)
+wait(5)
 end
 end
 
